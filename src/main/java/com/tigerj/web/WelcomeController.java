@@ -42,6 +42,13 @@ public class WelcomeController {
 		return "welcome";
 	}
 	
+	@GetMapping("/yingxiang")
+	public String yingXiangUpload(Map<String, Object> model) {
+		model.put("time", new Date());
+		model.put("message", this.message);
+		return "uploadFile";
+	}
+	
 	@GetMapping("/restGet")
 	public ResponseEntity<String> restGet(){
 		return new ResponseEntity<>("Not Found",HttpStatus.NOT_FOUND);

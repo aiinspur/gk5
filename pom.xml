@@ -25,6 +25,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+
 		<!-- Compile -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
