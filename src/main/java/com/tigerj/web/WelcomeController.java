@@ -34,9 +34,16 @@ public class WelcomeController {
 
 	@Value("${application.message:Hello World}")
 	private String message = "Hello World";
+	
+	@GetMapping
+	public String welcome(Map<String, Object> model) {
+		//model.put("time", new Date());
+		model.put("message", this.message);
+		return "welcome";
+	}
 
 	@GetMapping("/hello")
-	public String welcome(Map<String, Object> model) {
+	public String hello(Map<String, Object> model) {
 		model.put("time", new Date());
 		model.put("message", this.message);
 		return "welcome";

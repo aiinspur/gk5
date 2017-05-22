@@ -52,9 +52,9 @@ public class WebJspApplicationTests {
 	
 	@Test
 	public void testRestGet() throws Exception {
-		ResponseEntity<String> entity = this.restTemplate.getForEntity("/restGet", String.class);
+		ResponseEntity<String> entity = this.restTemplate.getForEntity("/restGet2", String.class);
 		assertThat(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
-		assertThat(entity.getBody()).isEqualTo("hello tigerj.");
+		assertThat(entity.getBody()).contains("hello tigerj.");
 	}
 	
 	
